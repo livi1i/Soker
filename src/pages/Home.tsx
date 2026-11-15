@@ -9,7 +9,7 @@ import { VStack } from "@astryxdesign/core/VStack";
 import { Text } from "@astryxdesign/core/Text";
 import { Heading } from "@astryxdesign/core/Heading";
 import { Button } from "@astryxdesign/core/Button";
-import { ArrowRight, CalendarPlus, Clock, MapPin, NavigationArrow, Phone, Star, InstagramLogo } from "@phosphor-icons/react";
+import { ArrowRight, CalendarPlus, Clock, MapPin, NavigationArrow, Phone, Star, InstagramLogo, ArrowUpRight, LockKey } from "@phosphor-icons/react";
 import { useTenant } from "../components/TenantLayout";
 import { LiquidGlass } from "../components/LiquidGlass";
 import { Reveal } from "../components/Reveal";
@@ -234,8 +234,31 @@ export function HomePage() {
         </div>
       </Reveal>
 
-      <footer className="container footer">
-        © {new Date().getFullYear()} {studio.name}. <Link to={`${base}/admin`}>Вход для владельца</Link>
+      <footer className="container studio-footer" aria-label="Информация о студии">
+        <section className="studio-footer__top" aria-label="Студия и навигация">
+          <Link to={`${base}/`} className="studio-footer__brand" aria-label={`${studio.name} — на главную`}>
+            {studio.logo_path ? <img src={mediaUrl(studio.logo_path)} alt={studio.name} width={160} height={112} loading="lazy" /> : <strong className="display">{studio.name}</strong>}
+          </Link>
+          <VStack gap={1} className="studio-footer__address">
+            <p>{studio.address}</p>
+            {hoursRows(hours).map(row => <p key={row.label}>{row.label} {row.value}</p>)}
+          </VStack>
+          <nav className="studio-footer__links" aria-label="Ссылки студии">
+            {studio.rating?.url && <a href={studio.rating.url} target="_blank" rel="noreferrer">{studio.name} на Яндекс Картах <ArrowUpRight size={14} aria-hidden /></a>}
+            <Link to={`${base}/services`}>Услуги и цены <ArrowUpRight size={14} aria-hidden /></Link>
+          </nav>
+        </section>
+        <details className="studio-footer__details">
+          <summary>Контакты студии</summary>
+          <nav className="studio-footer__contacts" aria-label="Контакты в подвале">
+            <a href={`tel:${studio.phone}`}>{phoneLabel(studio.phone)}</a>
+            {studio.socials.map(social => <a key={social.url} href={social.url} target="_blank" rel="noreferrer">{social.label} <ArrowUpRight size={14} aria-hidden /></a>)}
+          </nav>
+        </details>
+        <section className="studio-footer__bottom" aria-label="Информация и кабинет владельца">
+          <p>© {new Date().getFullYear()} {studio.name}. Детейлинг-студия в {studio.city === "Псков" ? "Пскове" : studio.city}.</p>
+          <Link to={`${base}/admin`} className="studio-footer__owner"><LockKey size={16} aria-hidden />Вход для владельца</Link>
+        </section>
       </footer>
     </>
   );
