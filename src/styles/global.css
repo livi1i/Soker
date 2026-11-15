@@ -532,3 +532,15 @@ html { scrollbar-gutter: stable; }
   .studio-footer__owner { align-self: flex-end; }
 }
 @media (prefers-reduced-motion:reduce) { .studio-footer__owner { transition:none; } }
+
+/* Quiet scrollbars for the page, dialogs and all nested scroll areas. */
+* { scrollbar-width: thin; scrollbar-color: rgb(255 255 255 / .16) transparent; }
+*:hover { scrollbar-color: rgb(255 255 255 / .28) transparent; }
+*::-webkit-scrollbar { width: .375rem; height: .375rem; }
+*::-webkit-scrollbar-track, *::-webkit-scrollbar-corner { background: transparent; }
+*::-webkit-scrollbar-thumb { background: rgb(255 255 255 / .16); border-radius: 999px; }
+*::-webkit-scrollbar-thumb:hover { background: rgb(255 255 255 / .28); }
+*::-webkit-scrollbar-button { display: none; }
+@media (forced-colors: active) {
+  * { scrollbar-width: auto; scrollbar-color: auto; }
+}
