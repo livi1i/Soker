@@ -499,10 +499,10 @@ html { scrollbar-gutter: stable; }
   .hero[data-studio="soker"] .hero__body { padding-top: 69vw; }
 }
 
+/* Keep the title stable on desktop and mobile during first-use font loading. */
+.hero__title[data-font-ready="false"] { opacity: 0; }
+.hero__title { animation: none; transition: none; }
 @media (max-width: 700px) {
-  /* Keep the line box in place while the first-use brand fonts are loading. */
-  .hero__title[data-font-ready="false"] { opacity: 0; }
-  .hero__title { animation: none; transition: none; }
   .hero .eyebrow { line-height: 1.5; }
 }
 
