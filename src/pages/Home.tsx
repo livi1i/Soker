@@ -1,3 +1,4 @@
+import { PageScrollbar } from "../components/PageScrollbar";
 import { InstallPrompt } from "../components/InstallPrompt";
 import { ReviewsCarousel } from "../components/ReviewsCarousel";
 import { serviceImage } from "../lib/serviceImages";
@@ -43,6 +44,7 @@ export function HomePage() {
 
   return (
     <>
+      <PageScrollbar />
       {bookingOpen && <BookingModal onClose={() => setBookingOpen(false)} />}
       {/* ───── Главное фото ───── */}
       <header className="hero" data-studio={slug} aria-label={studio.name}>

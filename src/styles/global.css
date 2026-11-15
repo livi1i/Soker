@@ -545,13 +545,13 @@ html { scrollbar-gutter: stable; }
   * { scrollbar-width: auto; scrollbar-color: auto; }
 }
 
-/* Chromium otherwise paints its native root track when scrollbar-color is set.
-   Keep the existing thumb, but let the home page show through its track. */
-@supports selector(::-webkit-scrollbar) {
-  html:has(.hero) { scrollbar-width: auto; scrollbar-color: auto; }
-  html:has(.hero)::-webkit-scrollbar-track,
-  html:has(.hero)::-webkit-scrollbar-corner { background: transparent; box-shadow: none; border: 0; }
-}
-@media (forced-colors: active) {
-  html:has(.hero) { scrollbar-width: auto; scrollbar-color: auto; }
+/* The root scrollbar overlays the home page without reserving a visible lane. */
+.page-scrollbar { display: none; }
+@media (hover: hover) and (pointer: fine) and (forced-colors: none) {
+  html:has(.hero) { scrollbar-width: none; scrollbar-gutter: auto; }
+  html:has(.hero)::-webkit-scrollbar { display: none; }
+  .page-scrollbar { display: block; position: fixed; right: .125rem; z-index: 30; width: .375rem; margin: 0; padding: 0; border: 0; border-radius: 999px; background: rgb(255 255 255 / .28); cursor: default; touch-action: none; user-select: none; }
+  .page-scrollbar:hover, .page-scrollbar:focus-visible { background: rgb(255 255 255 / .4); }
+  .page-scrollbar:focus-visible { outline: 1px solid var(--brand-accent); outline-offset: 1px; }
+  html:has(dialog[open]) .page-scrollbar { display: none; }
 }
