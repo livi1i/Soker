@@ -1,0 +1,9 @@
+project_id = "soker"
+
+[functions.public-api]
+# Ключ проверяем сами: функция публичная, но с пределом частоты обращений.
+verify_jwt = false
+
+[functions.reminders]
+# Вызывается только планировщиком базы с секретным заголовком.
+verify_jwt = false

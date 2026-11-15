@@ -1,0 +1,13 @@
+import { chromium, devices } from '@playwright/test';
+const url = process.argv[2]; const out = process.argv[3]; const mobile = process.argv[4] !== 'desktop';
+const b = await chromium.launch();
+const ctx = await b.newContext(mobile ? { ...devices['iPhone 13'], locale: 'ru-RU', timezoneId: 'Europe/Moscow' } : { viewport: { width: 1366, height: 860 }, locale: 'ru-RU' });
+const p = await ctx.newPage();
+const logs = [];
+p.on('console', m => { if (['error','warning'].includes(m.type())) logs.push(m.type()+': '+m.text().slice(0,300)); });
+p.on('pageerror', e => logs.push('pageerror: '+e.message));
+await p.goto(url, { waitUntil: 'networkidle' });
+await p.waitForTimeout(2500);
+await p.screenshot({ path: out, fullPage: process.argv[5] === 'full' });
+console.log(logs.join('\n') || 'no console errors');
+await b.close();

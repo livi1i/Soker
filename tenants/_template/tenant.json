@@ -1,0 +1,109 @@
+{
+  "slug": "my-studio",
+  "name": "Название студии",
+  "tagline": "Детейлинг-студия",
+  "description": "Коротко о студии: что делаете и почему к вам стоит приехать.",
+  "timezone": "Europe/Moscow",
+  "address": {
+    "text": "ул. Примерная, 1, Город",
+    "city": "Город",
+    "lat": 55.751244,
+    "lon": 37.618423
+  },
+  "phone": "+79000000000",
+  "socials": [],
+  "rating": null,
+  "brand": {
+    "themeColor": "#0b0b0c",
+    "accent": "#f2c27b",
+    "logo": "photos/logo.png",
+    "icon": "photos/mark.png",
+    "hero": "photos/hero.jpg",
+    "heroPosition": "50% 50%"
+  },
+  "booking": {
+    "slotStepMinutes": 30,
+    "bufferMinutes": 15,
+    "leadMinutes": 60,
+    "horizonDays": 30,
+    "cancelHoursBefore": 3
+  },
+  "hours": {
+    "mon": {
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    "tue": {
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    "wed": {
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    "thu": {
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    "fri": {
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    "sat": {
+      "opens": "09:00",
+      "closes": "21:00"
+    },
+    "sun": {
+      "opens": "09:00",
+      "closes": "21:00"
+    }
+  },
+  "daysOff": [],
+  "boxes": [
+    "Бокс 1",
+    "Бокс 2"
+  ],
+  "infoCards": [
+    {
+      "icon": "CalendarCheck",
+      "title": "Запись онлайн",
+      "text": "Выберите услугу и свободное время — бокс будет готов к вашему приезду."
+    },
+    {
+      "icon": "CreditCard",
+      "title": "Удобная оплата",
+      "text": "Карта, СБП, наличные или перевод — как вам удобнее."
+    },
+    {
+      "icon": "Gift",
+      "title": "Сертификаты",
+      "text": "Детейлинг в подарок: подарочный сертификат на любую сумму."
+    }
+  ],
+  "services": [
+    {
+      "category": "Мойка",
+      "name": "Комплексная мойка",
+      "description": "",
+      "price": 2000,
+      "durationMinutes": 90
+    },
+    {
+      "category": "Полировка",
+      "name": "Полировка с керамикой",
+      "description": "",
+      "price": 25000,
+      "durationMinutes": 0,
+      "durationDays": 2
+    }
+  ],
+  "gallery": [
+    {
+      "photo": "photos/work-1.jpg",
+      "caption": "Подпись к фото"
+    }
+  ],
+  "owner": {
+    "email": "owner@studio.example"
+  }
+}

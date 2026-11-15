@@ -1,0 +1,327 @@
+{
+  "slug": "soker",
+  "name": "Сокер",
+  "tagline": "Детейлинг-студия в Пскове",
+  "description": "Мойка, химчистка, полировка с керамикой и оклейка плёнкой.\nТри бокса на Белинского, 74 — записывайтесь онлайн на удобное время.",
+  "timezone": "Europe/Moscow",
+  "address": {
+    "text": "ул. Белинского, 74, Псков",
+    "city": "Псков",
+    "lat": 57.831002,
+    "lon": 28.345768
+  },
+  "phone": "+79922960101",
+  "socials": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/soker.lab/"
+    },
+    {
+      "label": "Яндекс Карты",
+      "url": "https://yandex.ru/maps/org/soker/171311944507/"
+    },
+    {
+      "label": "ВКонтакте",
+      "url": "https://vk.ru/club241086818"
+    },
+    {
+      "label": "2ГИС",
+      "url": "https://2gis.ru/pskov/firm/70000001118220568"
+    }
+  ],
+  "rating": {
+    "value": 5,
+    "count": 38,
+    "source": "Яндекс Карты",
+    "url": "https://yandex.ru/maps/org/soker/171311944507/reviews/"
+  },
+  "brand": {
+    "themeColor": "#0b0b0c",
+    "accent": "#f2c27b",
+    "logo": "photos/logo.png",
+    "icon": "photos/mark.png",
+    "hero": "photos/hero.jpg",
+    "heroPosition": "45.3% 55%"
+  },
+  "booking": {
+    "slotStepMinutes": 30,
+    "bufferMinutes": 15,
+    "leadMinutes": 60,
+    "horizonDays": 30,
+    "cancelHoursBefore": 3
+  },
+  "hours": {
+    "mon": {
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    "tue": {
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    "wed": {
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    "thu": {
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    "fri": {
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    "sat": {
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    "sun": {
+      "opens": "09:00",
+      "closes": "20:00"
+    }
+  },
+  "daysOff": [
+    "2026-12-31",
+    "2027-01-01"
+  ],
+  "boxes": [
+    "Бокс 1",
+    "Бокс 2",
+    "Бокс 3"
+  ],
+  "infoCards": [
+    {
+      "icon": "CalendarCheck",
+      "title": "Запись онлайн",
+      "text": "Выберите услугу и свободное время — бокс будет готов к вашему приезду."
+    },
+    {
+      "icon": "CreditCard",
+      "title": "Удобная оплата",
+      "text": "Карта, СБП, наличные или перевод — как вам удобнее."
+    },
+    {
+      "icon": "Gift",
+      "title": "Сертификаты",
+      "text": "Детейлинг в подарок: подарочный сертификат на любую сумму."
+    }
+  ],
+  "services": [
+    {
+      "category": "Мойка",
+      "name": "Комплексная мойка — седан",
+      "description": "Кузов, салон, стёкла и коврики.",
+      "price": 2300,
+      "durationMinutes": 80
+    },
+    {
+      "category": "Мойка",
+      "name": "Комплексная мойка — кроссовер",
+      "description": "Кузов, салон, стёкла и коврики.",
+      "price": 2600,
+      "durationMinutes": 90
+    },
+    {
+      "category": "Мойка",
+      "name": "Комплексная мойка — джип",
+      "description": "Кузов, салон, стёкла и коврики.",
+      "price": 2900,
+      "durationMinutes": 100
+    },
+    {
+      "category": "Мойка",
+      "name": "Комплексная мойка — микроавтобус",
+      "description": "Кузов, салон, стёкла и коврики.",
+      "price": 3400,
+      "durationMinutes": 120
+    },
+    {
+      "category": "Мойка",
+      "name": "Обезжиривание кузова",
+      "description": "Подготовка кузова к защитным покрытиям.",
+      "price": 1000,
+      "durationMinutes": 30
+    },
+    {
+      "category": "Детейлинг-мойка",
+      "name": "Детейлинг-мойка — седан",
+      "description": "Бережная ручная мойка с проработкой деталей.",
+      "price": 7500,
+      "durationMinutes": 180
+    },
+    {
+      "category": "Детейлинг-мойка",
+      "name": "Детейлинг-мойка — кроссовер",
+      "description": "Бережная ручная мойка с проработкой деталей.",
+      "price": 9500,
+      "durationMinutes": 210
+    },
+    {
+      "category": "Детейлинг-мойка",
+      "name": "Детейлинг-мойка — джип",
+      "description": "Бережная ручная мойка с проработкой деталей.",
+      "price": 11500,
+      "durationMinutes": 240
+    },
+    {
+      "category": "Детейлинг-мойка",
+      "name": "Детейлинг-мойка — микроавтобус",
+      "description": "Бережная ручная мойка с проработкой деталей.",
+      "price": 13500,
+      "durationMinutes": 270
+    },
+    {
+      "category": "Химчистка",
+      "name": "Химчистка автомобиля",
+      "description": "Полная химчистка салона.",
+      "price": 12000,
+      "durationMinutes": 0,
+      "durationDays": 1
+    },
+    {
+      "category": "Химчистка",
+      "name": "Чистка кожи",
+      "description": "Очистка и уход за кожаными элементами.",
+      "price": 2500,
+      "durationMinutes": 90
+    },
+    {
+      "category": "Химчистка",
+      "name": "Химчистка элемента",
+      "description": "Сиденье, потолок, дверная карта и другие элементы.",
+      "price": 500,
+      "durationMinutes": 30
+    },
+    {
+      "category": "Химчистка",
+      "name": "Химчистка дисков",
+      "description": "Очистка дисков от битума и тормозной пыли.",
+      "price": 350,
+      "durationMinutes": 30
+    },
+    {
+      "category": "Химчистка",
+      "name": "Химчистка ворсовых ковров",
+      "description": "",
+      "price": 150,
+      "durationMinutes": 20
+    },
+    {
+      "category": "Полировка и керамика",
+      "name": "Лёгкая полировка + керамика QM Light",
+      "description": "Освежает блеск и защищает лак.",
+      "price": 20000,
+      "durationMinutes": 0,
+      "durationDays": 2
+    },
+    {
+      "category": "Полировка и керамика",
+      "name": "Глубокая полировка + керамика QM Pater",
+      "description": "Убирает царапины и голограммы, долговременная защита.",
+      "price": 30000,
+      "durationMinutes": 0,
+      "durationDays": 3
+    },
+    {
+      "category": "Фары",
+      "name": "Полировка 2 фар",
+      "description": "",
+      "price": 1000,
+      "durationMinutes": 60
+    },
+    {
+      "category": "Фары",
+      "name": "Шлифовка и полировка 2 фар",
+      "description": "Для сильно помутневших фар.",
+      "price": 12000,
+      "durationMinutes": 240
+    },
+    {
+      "category": "Фары",
+      "name": "Оклейка 2 фар плёнкой",
+      "description": "",
+      "price": 6000,
+      "durationMinutes": 120
+    },
+    {
+      "category": "Оклейка",
+      "name": "Оклейка элемента",
+      "description": "Полиуретановая плёнка на один элемент кузова.",
+      "price": 4000,
+      "durationMinutes": 180
+    },
+    {
+      "category": "Оклейка",
+      "name": "Индивидуальный пакет",
+      "description": "Зоны риска на выбор: пороги, ручки, кромки.",
+      "price": 2000,
+      "durationMinutes": 120
+    },
+    {
+      "category": "Оклейка",
+      "name": "Полная оклейка полиуретаном",
+      "description": "",
+      "price": 240000,
+      "durationMinutes": 0,
+      "durationDays": 7
+    },
+    {
+      "category": "Оклейка",
+      "name": "Матовый полиуретан",
+      "description": "",
+      "price": 260000,
+      "durationMinutes": 0,
+      "durationDays": 7
+    },
+    {
+      "category": "Оклейка",
+      "name": "Цветной полиуретан",
+      "description": "",
+      "price": 280000,
+      "durationMinutes": 0,
+      "durationDays": 7
+    },
+    {
+      "category": "Дополнительно",
+      "name": "Твёрдый воск",
+      "description": "",
+      "price": 2500,
+      "durationMinutes": 60
+    },
+    {
+      "category": "Дополнительно",
+      "name": "Антидождь — передняя полусфера",
+      "description": "",
+      "price": 2000,
+      "durationMinutes": 40
+    },
+    {
+      "category": "Дополнительно",
+      "name": "Замена лобового стекла",
+      "description": "Стоимость стекла считается отдельно.",
+      "price": 5000,
+      "durationMinutes": 180
+    }
+  ],
+  "gallery": [
+    {
+      "photo": "photos/work-side.jpg",
+      "caption": "Комплексная мойка: кузов после работы"
+    },
+    {
+      "photo": "photos/work-front.jpg",
+      "caption": "Чистый кузов и прозрачная оптика"
+    },
+    {
+      "photo": "photos/work-interior.jpg",
+      "caption": "Уборка салона"
+    },
+    {
+      "photo": "photos/work-facade.jpg",
+      "caption": "Студия вечером: три бокса на Белинского"
+    }
+  ],
+  "owner": {
+    "email": "owner@soker.example"
+  }
+}
