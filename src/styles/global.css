@@ -479,3 +479,13 @@ html { scrollbar-gutter: stable; }
 .install-prompt__instructions { color: var(--color-text-secondary); font-size: .875rem; line-height: 1.65; }
 .install-prompt__instructions ol { margin: 0; padding-left: var(--spacing-5); }
 .install-prompt button:focus-visible { outline: 2px solid var(--brand-accent); outline-offset: var(--spacing-1); }
+
+/* Phone layout: keep the introduction compact and review photos readable. */
+@media (max-width: 700px) {
+  .hero { min-height: min(80svh, 48rem); }
+  .hero__body { padding-top: var(--spacing-20); padding-bottom: var(--spacing-6); }
+  .studio-benefits { padding-top: var(--spacing-4); }
+  .client-reviews__main-photo { height: auto; min-height: 0; max-height: min(65svh, 32rem); object-fit: contain; }
+  .client-reviews__photos button { width: 3.5rem; height: 3.5rem; opacity: .75; }
+  .client-reviews__photos img { object-fit: contain; }
+}

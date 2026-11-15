@@ -83,7 +83,7 @@ export function HomePage() {
 
       {/* ───── Три карточки ───── */}
       {studio.info_cards.length > 0 && (
-        <Reveal className="container section" ariaLabelledby="about-title">
+        <Reveal className="container section studio-benefits" ariaLabelledby="about-title">
           <h2 id="about-title" className="visually-hidden">О студии</h2>
           <div className="info-grid">
             {studio.info_cards.map((c, i) => (
