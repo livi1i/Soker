@@ -1,7 +1,7 @@
 import { InstallPrompt } from "../components/InstallPrompt";
 import { ReviewsCarousel } from "../components/ReviewsCarousel";
 import { serviceImage } from "../lib/serviceImages";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BookingModal } from "../components/BookingModal";
 import { Link } from "react-router";
 import { HStack } from "@astryxdesign/core/HStack";
@@ -30,6 +30,16 @@ export function HomePage() {
   const categories = groupByCategory(active);
   const todayIso = isoToday(studio.timezone);
   const [bookingOpen, setBookingOpen] = useState(false);
+  const [heroFontsReady, setHeroFontsReady] = useState(false);
+  useEffect(() => {
+    let active = true;
+    // Reserve the title's space, but do not show a temporary font on phones.
+    Promise.all([
+      document.fonts.load('400 48px "Russo One"', 'СОКЕР'),
+      document.fonts.load('400 16px "Manrope Variable"', 'Сокер 0123456789'),
+    ]).catch(() => {}).finally(() => { if (active) setHeroFontsReady(true); });
+    return () => { active = false; };
+  }, []);
 
   return (
     <>
@@ -65,7 +75,7 @@ export function HomePage() {
               <Star size={14} weight="fill" aria-hidden /> {studio.rating.value.toFixed(1).replace(".", ",")} · {studio.rating.count} оценок · {studio.rating.source}
             </a>
           )}
-          <h1 className="hero__title">{studio.name}</h1>
+          <h1 className="hero__title" data-font-ready={heroFontsReady}>{studio.name}</h1>
           <p className="hero__lead">{studio.tagline}.{"\n"}{studio.description}</p>
           {/* Матовое стекло размывает фон под кнопкой в реальном времени. */}
           <LiquidGlass className="hero-cta">
