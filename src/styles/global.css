@@ -544,3 +544,14 @@ html { scrollbar-gutter: stable; }
 @media (forced-colors: active) {
   * { scrollbar-width: auto; scrollbar-color: auto; }
 }
+
+/* Chromium otherwise paints its native root track when scrollbar-color is set.
+   Keep the existing thumb, but let the home page show through its track. */
+@supports selector(::-webkit-scrollbar) {
+  html:has(.hero) { scrollbar-width: auto; scrollbar-color: auto; }
+  html:has(.hero)::-webkit-scrollbar-track,
+  html:has(.hero)::-webkit-scrollbar-corner { background: transparent; box-shadow: none; border: 0; }
+}
+@media (forced-colors: active) {
+  html:has(.hero) { scrollbar-width: auto; scrollbar-color: auto; }
+}
